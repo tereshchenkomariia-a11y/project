@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NORI — Преміальний японський онлайн-ресторан</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайту -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">NORI<span>.</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Меню</a></li>
+                    <li><a href="#about">Філософія</a></li>
+                    <li><a href="#delivery">Доставка</a></li>
+                </ul>
+            </nav>
+            <button class="cart-btn" id="openCart">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-0.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                Кошик (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Головний баннер -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Сучасна японська гастрономія</h1>
+            <p>Авторські роли, свіжий добірний лосось та бездоганний баланс смаку у кожному шматочку.</p>
+            <a href="#menu" class="btn-primary">Переглянути меню</a>
+        </div>
+    </section>
+
+    <!-- Секція Меню -->
+    <section class="menu" id="menu">
+        <h2 class="section-title">Вибрані позиції</h2>
+        <div class="menu-grid">
+            <!-- Товар 1 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?auto=format&fit=crop&w=600&q=80" alt="Філадельфія Норі">
+                <div class="card-body">
+                    <h3>Філадельфія Норі</h3>
+                    <p>Подвійний лосось, ніжний крем-сир, авокадо, огірок, рис хакумай.</p>
+                    <div class="card-footer">
+                        <span class="price">340 грн</span>
+                        <button class="add-to-cart" data-name="Філадельфія Норі" data-price="340">Додати</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Червоний Дракон">
+                <div class="card-body">
+                    <h3>Червоний Дракон</h3>
+                    <p>Вугор, тигрова креветка у темпурі, соус унагі, слайси свіжого лосося.</p>
+                    <div class="card-footer">
+                        <span class="price">410 грн</span>
+                        <button class="add-to-cart" data-name="Червоний Дракон" data-price="410">Додати</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Макі з тунцем Блюфін">
+                <div class="card-body">
+                    <h3>Макі з тунцем</h3>
+                    <p>Преміальний тунець блуфін, соус спайсі, зелена цибуля, норі.</p>
+                    <div class="card-footer">
+                        <span class="price">290 грн</span>
+                        <button class="add-to-cart" data-name="Макі з тунцем" data-price="290">Додати</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Виїжджаючий кошик -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Ваше замовлення</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p style="color: var(--text-muted); text-align: center; margin-top: 40px;">Кошик порожній</p>
+        </div>
+        <div class="cart-footer-modal">
+            <div class="total-price">
+                <span>До сплати:</span>
+                <span id="totalPrice">0 грн</span>
+            </div>
+            <button class="btn-primary" style="width: 100%; border: none; cursor: pointer; text-align: center;" id="checkoutBtn">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2026 NORI. Усі права захищені. Мистецтво смаку.</p>
+    </footer>
+
+    <!-- Підключення JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
